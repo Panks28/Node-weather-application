@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+port = process.env.PORT || 8080; 
 
 const publicDirectoryPath = path.join(__dirname, './resources');
 
@@ -22,7 +23,7 @@ app.get('/help', function(req,res) {
     })
 })
 
-app.listen (3000, function (){
+app.listen (port, function (){
 
     console.log("Server loaded at Port 3000 successfully!")
 })
